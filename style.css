@@ -1,0 +1,147 @@
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+canvas {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 100;
+  background-color: transparent;
+}
+
+#bg {
+  background-color: Beige;
+  z-index: 10;
+}
+
+.tool>span {
+  display: inline-block;
+  position: absolute;
+  width: 150px;
+  height: 30px;
+  border: 1px solid DimGray;
+  text-align: center;
+  line-height: 30px;
+  color: DimGray;
+  cursor: pointer;
+}
+
+.draw {
+  left: 10px;
+  top: 10px;
+}
+
+.clear {
+  left: 200px;
+  top: 10px;
+}
+
+.clearCanvas {
+  left: 400px;
+  top: 10px;
+}
+
+.screen {
+  left: 600px;
+  top: 10px;
+}
+
+.feedback {
+  left: 800px;
+  top: 10px;
+}
+
+.tool {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 99999;
+}
+
+.color {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 220px;
+  z-index: 9999;
+  height: 200px;
+}
+
+.color>span {
+  display: inline-block;
+  height: 25px;
+  margin: 2px;
+  width: 100px;
+  line-height: 20px;
+  text-align: center;
+  float: left;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.c1 {
+  background-color: red;
+  color: white;
+}
+
+.c2 {
+  background-color: yellow;
+  color: black;
+}
+
+.c3 {
+  background-color: #333;
+  color: white;
+}
+
+.c4 {
+  background-color: green;
+  color: white;
+}
+
+.c5 {
+  background-color: white;
+  color: Black;
+}
+
+.c6 {
+  background-color: purple;
+  color: white;
+}
+
+.linewidth {
+  position: absolute;
+  top: 100px;
+  right: 0px;
+  width: 180px;
+  height: 100px;
+  z-index: 09999;
+}
+
+.linewidth>span {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 5px;
+  cursor: pointer;
+  background-color: DimGray;
+}
+
+.line1 {
+  height: 5px;
+}
+
+.line2 {
+  height: 10px;
+}
+
+.line3 {
+  height: 20px;
+}
