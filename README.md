@@ -15,7 +15,7 @@ Version: 1.0
 - Clear screen
 - Take a screenshot and download
 - Give feedback to the author
-![image](https://github.com/ArdentLabs/milestone-1-YinhaoHe/blob/master/demo/whiteboard1.0.jpg?raw=true)
+![image](./demo/whiteboard1.0.jpg)
 
 ### User Manual:
 
