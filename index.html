@@ -1,34 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Milestone1</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <header>
+            <h1>Virtual Whiteborad</h1>
+        </header>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Yinhao's whiteboard 1.0</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
+        <main>
+            <div id="board">
+                <canvas id="canvas"></canvas>
 
-<body>
-  <div class="tool">
-    <span class="draw" onclick="draw()">Pen</span>
-    <span class="clear" onclick="eraser()">Eraser</span>
-    <span class="clearCanvas" onclick="clearCanvas()">Clear</span>
-    <span class="screen" onclick="screena()">Screenshot</span>
-    <span class="feedback" onclick="feedback()">Feedback</span>
-  </div>
-  <div class="color">
-    <span class="c1" onclick="changeColor('red')">Red</span>
-    <span class="c2" onclick="changeColor('yellow')">Yellow</span>
-    <span class="c3" onclick="changeColor('black')">Black</span>
-    <span class="c4" onclick="changeColor('green')">Green</span>
-    <span class="c5" onclick="changeColor('white')">White</span>
-    <span class="c6" onclick="changeColor('purple')">Purple</span>
-  </div>
-  <div class="linewidth">
-    <span class="line1" onclick="changeWidth(5)"></span>
-    <span class="line2" onclick="changeWidth(10)"></span>
-    <span class="line3" onclick="changeWidth(20)"></span>
-  </div>
-  <script src="script.js" type="text/javascript"></script>
-</body>
+                <div id="option_bar">
+                    <div class="option_btn" onclick="resetCanvas();"><i class="fa fa-trash" aria-hidden="true" style="font-size: 32px;"></i></div>
+                    <div class="option_btn" onclick="restoreCanvas();"><img src="image/ict-undo.png" alt="Undo"></div>
+                    <div class="option_btn" onclick="showColorOption();">
+                        <div id="color_option" class="color_option">
+                            <img src="image/black-circle.png" alt="black" style="width: 36px;" onclick="changeColor('black');">
+                            <img src="image/red-circle.png" alt="red" style="width: 36px;" onclick="changeColor('red');">
+                            <img src="image/yellow-circle.png" alt="yellow" style="width: 36px;" onclick="changeColor('#ffea00');">
+                            <img src="image/blue-circle.png" alt="blue" style="width: 36px;"onclick="changeColor('blue');"> 
+                        </div>
+                        <img src="image/ict-color.png" alt="color"style="width:32px;margin:7px 0 0 8px;">
+                    </div>  
+                    <div id="pencil" class="option_btn" onclick="changePen();">
+                        <img src="image/ict-pencil.png" alt="Pen">
+                    </div>
+                    <div id="eraser" class="option_btn" onclick="showEraserOption();">
+                        <div id="eraser_option" class="color_option">
+                            <img src="image/eraser-circle.png" alt="blue" style="width: 36px;"onclick="changeEraser('15');"> 
+                            <img src="image/eraser-circle.png" alt="blue" style="width: 48px;"onclick="changeEraser('20');">
+                            <img src="image/eraser-circle.png" alt="blue" style="width: 60px;"onclick="changeEraser('25');">  
+                        </div>
+                        <img src="image/ict-eraser.png" alt="Eraser">
+                    </div>
+                    <div id="rect" class="option_btn" onclick="changeRect();">
+                        <img src="image/ict-rectangle.png" alt="Rectangle">
+                    </div>
+                </div>
+            </div>
+
+            <img id='a' crossorigin="anonymous">
+        </main>
+
+        <footer></footer>
+
+    </body>
+  
+    <script src="script.js"></script>
 
 </html>

@@ -1,147 +1,73 @@
-html,
-body {
-  margin: 0px;
-  padding: 0px;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
+body{
+    background-color: black;
+    text-align: center;
 }
 
-canvas {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  z-index: 100;
-  background-color: transparent;
+h1{
+    color: DodgerBlue;
+    font-family:Tahoma;
 }
 
-#bg {
-  background-color: Beige;
-  z-index: 10;
+#board{
+    display: flex;
+    flex-direction: column;
+    border: 3px solid lightgreen;
+    border-radius: 5px;
+    width: 80%;
+    height: 90vh;
+    margin: auto;
 }
 
-.tool>span {
-  display: inline-block;
-  position: absolute;
-  width: 150px;
-  height: 30px;
-  border: 1px solid DimGray;
-  text-align: center;
-  line-height: 30px;
-  color: DimGray;
-  cursor: pointer;
+#canvas{
+    margin: auto;
+    background-color: white;
 }
 
-.draw {
-  left: 10px;
-  top: 10px;
+#option_bar{
+    width: 100%;
+    height: 11.76%;
+    background-color: lightgray;
+    border-top: 1px solid gray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.clear {
-  left: 200px;
-  top: 10px;
+
+.option_btn{
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
 }
 
-.clearCanvas {
-  left: 400px;
-  top: 10px;
+.option_btn:hover{
+    background-color: rgb(150, 150, 150);
+    border-radius: 10px;
 }
 
-.screen {
-  left: 600px;
-  top: 10px;
+.hoverBtn{
+    background-color: rgb(150, 150, 150);
+    border-radius: 10px;
 }
 
-.feedback {
-  left: 800px;
-  top: 10px;
+.color_option{
+    display: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px 10px;
+    background-color: aquamarine;
+    position: absolute;
+    bottom: 107px;
+    align-items: center;    /* only used for eraser options */
 }
 
-.tool {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  z-index: 99999;
+.color_option > img{
+    margin: 10px;
 }
 
-.color {
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  width: 220px;
-  z-index: 9999;
-  height: 200px;
-}
-
-.color>span {
-  display: inline-block;
-  height: 25px;
-  margin: 2px;
-  width: 100px;
-  line-height: 20px;
-  text-align: center;
-  float: left;
-  cursor: pointer;
-  font-size: 15px;
-}
-
-.c1 {
-  background-color: red;
-  color: white;
-}
-
-.c2 {
-  background-color: yellow;
-  color: black;
-}
-
-.c3 {
-  background-color: #333;
-  color: white;
-}
-
-.c4 {
-  background-color: green;
-  color: white;
-}
-
-.c5 {
-  background-color: white;
-  color: Black;
-}
-
-.c6 {
-  background-color: purple;
-  color: white;
-}
-
-.linewidth {
-  position: absolute;
-  top: 100px;
-  right: 0px;
-  width: 180px;
-  height: 100px;
-  z-index: 09999;
-}
-
-.linewidth>span {
-  width: 100%;
-  display: inline-block;
-  margin-bottom: 5px;
-  cursor: pointer;
-  background-color: DimGray;
-}
-
-.line1 {
-  height: 5px;
-}
-
-.line2 {
-  height: 10px;
-}
-
-.line3 {
-  height: 20px;
+.color_option > img:hover{
+    background-color: black;
 }
