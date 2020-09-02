@@ -1,34 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
+	<head>
+		<title>ArdentBoard</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		
+		<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+		<link href="style/style.css" type="text/css" rel="stylesheet">
+	</head>
+	
+	<body>
+		<div>
+			<menu id="control">
+				<div id="range-reset-control">
+					<input type="range" id="thickness" min="1" max="50" step="1">
+					<button class="reset-button" id="reset">Clear</button>
+				</div>
+				
+				<div id="pen-eraser-grid-control">
+					<input type="color" id="color-picker" value="#000000">
+					
+					<button class="input-button" id="pen">
+						<i class="las la-pencil-alt la-2x" id="pen-icon"></i>
+					</button>
+					
+					<button class="input-button" id="eraser">
+						<i class="las la-eraser la-2x" id="eraser-icon"></i>
+					</button>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Yinhao's whiteboard 1.0</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
+					<input type="checkbox" id="grid">
+					<label for="grid">Grid</label>
+				</div>
+			</menu>
+			<canvas id="whiteboard"></canvas>
+		</div>
 
-<body>
-  <div class="tool">
-    <span class="draw" onclick="draw()">Pen</span>
-    <span class="clear" onclick="eraser()">Eraser</span>
-    <span class="clearCanvas" onclick="clearCanvas()">Clear</span>
-    <span class="screen" onclick="screena()">Screenshot</span>
-    <span class="feedback" onclick="feedback()">Feedback</span>
-  </div>
-  <div class="color">
-    <span class="c1" onclick="changeColor('red')">Red</span>
-    <span class="c2" onclick="changeColor('yellow')">Yellow</span>
-    <span class="c3" onclick="changeColor('black')">Black</span>
-    <span class="c4" onclick="changeColor('green')">Green</span>
-    <span class="c5" onclick="changeColor('white')">White</span>
-    <span class="c6" onclick="changeColor('purple')">Purple</span>
-  </div>
-  <div class="linewidth">
-    <span class="line1" onclick="changeWidth(5)"></span>
-    <span class="line2" onclick="changeWidth(10)"></span>
-    <span class="line3" onclick="changeWidth(20)"></span>
-  </div>
-  <script src="script.js" type="text/javascript"></script>
-</body>
-
+		<script src="./script/script.js"></script>
+	</body>
 </html>
